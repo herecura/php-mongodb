@@ -1,0 +1,1 @@
+update_pkgver=$(wget -q -O- http://pecl.php.net/package/mongodb | grep -m1 -ie "\/get\/mongodb-[0-9\.]*\.tgz" | sed 's,.*<a.*mongodb-\([0-9\.]*\)\.tgz.*,\1,')
