@@ -4,7 +4,7 @@
 
 pkgname=php-mongodb
 pkgver=1.1.1
-pkgrel=1
+pkgrel=2
 pkgdesc="MongoDB driver for PHP"
 arch=("i686" "x86_64")
 url="http://mongodb.github.io/mongo-php-driver"
