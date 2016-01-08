@@ -3,8 +3,8 @@
 # Contributor: Martin Striz < ms AT martinstriz DOT cz >
 
 pkgname=php-mongodb
-pkgver=1.1.1
-pkgrel=2
+pkgver=1.1.2
+pkgrel=1
 pkgdesc="MongoDB driver for PHP"
 arch=("i686" "x86_64")
 url="http://mongodb.github.io/mongo-php-driver"
@@ -15,16 +15,9 @@ install=php-mongodb.install
 source=(
 	"http://pecl.php.net/get/mongodb-$pkgver.tgz"
 	"mongodb.ini"
-    '185.patch'
 )
-sha256sums=('0899b00435edf143ddc0ededd8027013c86bf59214d63ae1f3c7be0eaae11ceb'
-            '242b9ffea6bd84f813c7fc2a767eaa89f83577c5ff10ff36aecec2ca308ff72b'
-            'df377db584b2d5ea1892da19afffbed0ade34a2e3a0cea4ceb584da429354aaf')
-
-prepare() {
-	cd mongodb-$pkgver
-    patch -p1 -i "$srcdir/185.patch"
-}
+sha256sums=('4cb80002dfb6be0805457ef0c9f4e91fd03c2e54baedac958ad1e498c741484d'
+            '242b9ffea6bd84f813c7fc2a767eaa89f83577c5ff10ff36aecec2ca308ff72b')
 
 build() {
 	cd mongodb-$pkgver
