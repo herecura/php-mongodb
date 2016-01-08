@@ -1,15 +1,18 @@
 # $Id$
 # Maintainer: BlackEagle < ike DOT devolder AT gmail DOT com >
+# Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Martin Striz < ms AT martinstriz DOT cz >
+# Contributor: Jarek Sedlacek <jareksedlacek@gmail.com>
 
 pkgname=php-mongodb
 pkgver=1.1.2
-pkgrel=1
+pkgrel=2
 pkgdesc="MongoDB driver for PHP"
 arch=("i686" "x86_64")
 url="http://mongodb.github.io/mongo-php-driver"
-license=("APACHE")
-depends=("php")
+license=("Apache")
+depends=('php' 'libmongoc')
+makedepends=('re2c')
 backup=("etc/php/conf.d/mongodb.ini")
 install=php-mongodb.install
 source=(
@@ -22,7 +25,7 @@ sha256sums=('4cb80002dfb6be0805457ef0c9f4e91fd03c2e54baedac958ad1e498c741484d'
 build() {
 	cd mongodb-$pkgver
 	phpize
-	./configure --prefix=/usr
+	./configure --prefix=/usr --with-libbson --with-libmongoc
 }
 
 package() {
