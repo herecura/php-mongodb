@@ -6,7 +6,7 @@
 
 pkgname=php-mongodb
 pkgver=1.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="MongoDB driver for PHP"
 arch=("i686" "x86_64")
 url="http://mongodb.github.io/mongo-php-driver"
@@ -17,7 +17,7 @@ makedepends=('re2c')
 backup=("etc/php/conf.d/mongodb.ini")
 install=php-mongodb.install
 source=(
-	"http://pecl.php.net/get/mongodb-$pkgver.tgz"
+	"https://pecl.php.net/get/mongodb-$pkgver.tgz"
 	"mongodb.ini"
 )
 sha256sums=('72630b038c7b57631a1d3931bcc1cb237fe79a25498b56ad65cc536d1bb0aed4'
