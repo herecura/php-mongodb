@@ -1,4 +1,3 @@
-# $Id$
 # Maintainer: BlackEagle < ike DOT devolder AT gmail DOT com >
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
 # Contributor: Martin Striz < ms AT martinstriz DOT cz >
@@ -6,7 +5,7 @@
 
 pkgname=php-mongodb
 pkgver=1.5.3
-pkgrel=1
+pkgrel=2
 pkgdesc="MongoDB driver for PHP"
 arch=("x86_64")
 url="http://mongodb.github.io/mongo-php-driver"
